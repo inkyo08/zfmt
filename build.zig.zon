@@ -1,0 +1,7 @@
+.{
+  .name = .zfmt,
+  .version = "0.0.1",
+  .fingerprint = 0xeea788b93e7cd485,
+  .minimum_zig_version = "0.16.0",
+  .paths = .{""},
+}
