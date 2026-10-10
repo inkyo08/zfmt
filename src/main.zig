@@ -39,7 +39,7 @@ pub fn main(init: std.process.Init) !void {
 
   const mode: std.zig.Ast.Mode = if (mem.endsWith(u8, file_path, ".zon")) .zon else .zig;
 
-  var tree = try std.zig.Ast.parse(gpa, source_code, mode);
+  var tree = try std.zig.Ast.parse(gpa, source_code, .{ .mode = mode });
   defer tree.deinit(gpa);
 
   if (tree.errors.len != 0) {
